@@ -1,0 +1,30 @@
+MODULE DESCRIPTION
+------------------------
+DHT11 module.
+Read Temperature, Humidity and calculate Dew Point
+from DHT11 digital sensor.
+
+USAGE
+------------------------
+- Attach DHT11 data cable to a digital pin (e.g. 7)
+- Include these lines in EXTRA MODULES section
+	// DHT
+		#define DHT11PIN 7 	// pin attached to DHT11
+		#include "dht11.h"
+		#include "vDHT11.h"
+- Include these lines in INIT MODULES section	
+		initDHT();    	 
+- Include these lines in SERIAL MODULES section	
+		serialDHT();    	 
+- Include these lines in GET COMMANDS section
+		cmdGetDHT(); 
+
+SERIAL COMMANDS
+------------------------
+- GET_DHT
+
+MEASURES
+------------------------
+- TEMPERATURE
+- HUMIDITY
+- DEW_POINT

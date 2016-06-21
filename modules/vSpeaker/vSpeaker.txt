@@ -1,0 +1,25 @@
+MODULE DESCRIPTION
+------------------------
+Speaker module.
+
+USAGE
+------------------------
+- Attach speaker to a digital pin supported by tone() (e.g. 12)
+- Include these lines in EXTRA MODULES section
+	// Speaker
+		#include "pitches.h"
+		#define DEFAULT_NOTE          NOTE_E5
+		#define DEFAULT_BEEP_DURATION 250
+		#define SPKR_PIN              12
+		#include "vSpeaker.h"
+- Include these lines in INIT MODULES section	
+	initSpeaker();    	 
+- Include these lines in SERIAL MODULES section	
+	serialSpeaker();    	 
+
+SERIAL COMMANDS
+------------------------
+- SPK_TEST
+- SPK_BEEP
+- SPK_ALARM
+- SPK_PLAY

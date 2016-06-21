@@ -1,0 +1,31 @@
+MODULE DESCRIPTION
+------------------------
+Relays module.
+Manage Relay shields, save Relay status on EEPROM and mantains previous status.
+
+USAGE
+------------------------
+- Attach Relays control channels to a set of digital pin (e.g. 2-9)
+- Include these lines in EXTRA MODULES section
+	// Relay
+		int RELAY_PINS[] = {2,3,4,5,6,7,8,9};		// Pins attached to Relays
+		int RELAY_STATUS[] = {0,0,0,0,0,0,0,0};	// Initial Relays Status
+		#define RELAY_EEPROM_ADDRESS 0					// EEPROM Address to save Relays Status
+		#include "vRelay.h"
+- Include these lines in INIT MODULES section
+	initRelay();
+- Include these lines in SERIAL MODULES section
+	serialRel();
+- Include these lines in GET COMMANDS section
+	cmdRelStatus();
+
+SERIAL COMMANDS
+------------------------
+- REL_ON
+- REL_OFF
+- REL_STATUS
+- REL_RESET
+
+MEASURES
+------------------------
+- REL_STATUS

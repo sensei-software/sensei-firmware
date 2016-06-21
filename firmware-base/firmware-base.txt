@@ -1,0 +1,26 @@
+Sensei Firmware Base
+------------------------
+This is the template for a new Sensei Firmware.
+- Copy this directory in your Arduino folder or where you prefer.
+- Rename the folder with something like "your-project"
+- Rename the .ino file according to the dir name, e.g. "your-project.ino"
+
+EXTRA MODULES
+------------------------
+- chose a module from the sensei-firmware/modules dir
+- copy all the module files within "your-project" directory (no sub-directories)
+- read the ".txt" file for setup instruction
+
+FIRMWARE STRUCTURE
+------------------------
+- DEVICE CONFIG: basic device config (name, version, etc.)
+- CORE MODULES: sensei core config/inclusions section
+- EXTRA MODULES: here you can insert extra modules config sections
+- SETUP
+-- INIT CORE: initialization of core components
+-- INIT MODULES: initialization of extra modules
+- LOOP: you should not touch anything here
+- SERIAL: this containt global serial commands (GET and DUMP) and extra serial command
+-- GET COMMANDS: commands to be included in a GET execution
+-- SERIAL MODULES: extra modules serial commands registration
+-- SERIAL CORE: core serial init

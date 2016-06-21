@@ -1,0 +1,28 @@
+MODULE DESCRIPTION
+------------------------
+LS1 Light module.
+Read Light percentage from a signle 10Kohm photoresistor
+attached to an analog input (e.g. A3)
+
+
+USAGE
+------------------------
+- Attach voltage divider output to an analog pin (e.g. A3)
+- Include these lines in EXTRA MODULES section
+	// LS1
+		#define LS1_P1 A3
+		#include "vLS1.h";
+- Include these lines in INIT MODULES section	
+	initLS1();  
+- Include these lines in SERIAL MODULES section	
+	serialLS1();    	 
+- Include these lines in GET COMMANDS section
+	cmdGetLight(); 
+
+SERIAL COMMANDS
+------------------------
+- GET_LIGHT
+
+MEASURES
+------------------------
+- LIGHT
